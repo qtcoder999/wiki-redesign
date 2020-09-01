@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       Paras Anand
 // @match        https://en.wikipedia.org/*
 // @grant        none
 // ==/UserScript==
@@ -16,7 +16,8 @@
         "table[role=\"presentation\"]",
         "#mw-panel",
         ".mw-indicators.mw-body-content",
-        "div[role=\"note\"]"
+        "#centralNotice",
+        "#siteNotice"
     ];
 
     const remove = selector => {
@@ -42,6 +43,12 @@
                  }
                  #left-navigation{
                            padding-left: 1.5em;
+                 }
+                 div[role="note"]{
+                           display: hidden;
+                 }
+                 #contentSub, #contentSub2 {
+                           margin: 0 0 1em 1em;
                  }
    `
 
