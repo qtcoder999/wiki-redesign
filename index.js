@@ -17,7 +17,11 @@
         "#mw-panel",
         ".mw-indicators.mw-body-content",
         "#centralNotice",
-        "#siteNotice"
+        "#siteNotice",
+        "#mw-navigation",
+        "#mw-page-base",
+        "#mw-head-base",
+        "#coordinates"
     ];
 
     const remove = selector => {
@@ -41,11 +45,14 @@
                 .mw-body, #mw-head-base, #left-navigation, #mw-data-after-content, .mw-footer {
                            margin-left: 0!important;
                  }
+                 .mw-body {
+                           padding: 1em 1.5em 1em 1.5em;
+                 }
                  #left-navigation{
                            padding-left: 1.5em;
                  }
                  div[role="note"]{
-                           display: hidden;
+                           display: none;
                  }
                  #contentSub, #contentSub2 {
                            margin: 0 0 1em 1em;
